@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @event.name %></div>
+    <div class="panel-body">
+      <p>Description: <%= @event.description %></p>
+
+      <hr />
+      <!-- Main Info -->
+      <p>Address: <%= @event.location %></p>
+      <p>Host: <%= @event.user.email %></p>
+
+      <hr />
+
+      <p>Price: <%= @event.price %></p>
+      <p>Capacity: <%= @event.capacity %> <%= @event.capacity > 1 ? "Guests" : "Guest" %></p>
+      <p>Guests: <%= @event.guests %></p>
+
+      <hr />
+
+      <!-- Amenities -->
+      <h4>Amenities</h4>
+      <ul class="amenities">
+        <li><%= !@event.includes_food ? ("<del>Food included<del>").html_safe : "Food included" %></li>
+        <li><%= !@event.includes_drinks ? ("<del>Drinks included</del>").html_safe : "Drinks included" %></li>
+      </ul>
+
+      <hr />
+
+      <p>Status: <%= @event.active ? "Published" : "Not Published" %></p>
+
+      <hr />
+
+      <h4>Categories</h4>
+      <% @categories.each do |category| %>
+        <span class="label label-success"><%= category.name %></span>
+      <% end %>
+
+      <hr />
+      <p>Picture:</p>
+      <%= image_tag @event.picture, class: "small-image-size" %>
+    </div>
+</div>
+
+<%= link_to "Back", events_path, class: "btn btn-default" %>
