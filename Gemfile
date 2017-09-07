@@ -72,3 +72,9 @@ gem 'devise', '~> 4.2'
 gem 'carrierwave', '0.11.2'
 
 gem 'cloudinary', '1.2.3'
+
+source 'https://rubygems.org'
+
+ruby '2.4.1'
+
+gem 'rails_12factor', group: :production
