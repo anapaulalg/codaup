@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   validates :location, presence: true, length: { maximum: 100 }
   validates :price, presence: true
   validates :capacity, presence: true
-  validates :guests, presence: true
+#  validates :guests, presence: true
   validates :starts_at, presence: true
   validates :ends_at, presence: true
 

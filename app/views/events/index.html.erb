@@ -9,7 +9,7 @@
             <% @events.each do |event| %>
               <div class="col-sm-4">
                 <div class="col-sm-12">
-                  <%= image_tag event.picture, class: "small-image-size" %>
+                  <%=  image_tag event.picture, class: "small-image-size" if event.picture.present? %>
                 </div>
                 <div class="col-sm-12">
                   <div>
