@@ -4,7 +4,7 @@
       <div class="panel-heading preview">
         <%= image_tag photo.image.thumbnail %>
       </div>
-    
+
     </div>
 
     <%= link_to "Delete", photo_path( photo.id ), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>

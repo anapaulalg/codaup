@@ -40,11 +40,10 @@ end
 
  def update
    if @event.update(event_params)
-     redirect_to @event, notice: "Event successfully updated"
      image_params.each do |image|
      @event.photos.create(image: image)
      end
-    redirect_to edit_event_path(@event), notice: "Event successfully updated"
+     redirect_to edit_event_path(@event), notice: "Event successfully updated"
    else
      render :edit
    end

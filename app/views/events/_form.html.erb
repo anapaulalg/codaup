@@ -74,12 +74,12 @@
     <%= f.check_box :active %> Active
   </div>
 
-  <div class="actions">
-    <%= f.submit "Save", class: "btn btn-primary" %>
-  </div>
-
   <div id="photos">
     <%= render 'photos/list' %>
   </div>
   
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+
 <% end %>

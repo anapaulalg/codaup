@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20170907102438) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.index ["user_id"], name: "index_events_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|
