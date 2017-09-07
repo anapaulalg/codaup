@@ -2,6 +2,7 @@ Photo.destroy_all
 User.destroy_all
 Category.destroy_all
 Event.destroy_all
+Profile.delete_all
 
 ana = User.create(email: "ana@paula.com", password: "anapaula")
 
