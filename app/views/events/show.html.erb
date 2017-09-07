@@ -34,7 +34,14 @@
         <span class="label label-success"><%= category.name %></span>
       <% end %>
 
+
       <hr />
+
+      <h4>Photos</h4>
+      <% @event.photos.each do |photo| %>
+        <%= image_tag photo.image %>
+      <% end %>
+
       <p>Picture:</p>
       <%= image_tag @event.picture, class: "small-image-size" %>
     </div>

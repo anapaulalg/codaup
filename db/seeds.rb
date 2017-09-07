@@ -1,3 +1,4 @@
+Photo.destroy_all
 User.destroy_all
 Category.destroy_all
 Event.destroy_all
@@ -22,7 +23,7 @@ event = Event.create(name: "My super nice event",
   user: ana)
 
 event2 = Event.create(name: "Meepo party",
-  description: "Best dog party in holland",
+  description: "Best dog party in The Netherlands",
   location: "Eindhoven",
   price: 100,
   capacity: 20,
@@ -50,3 +51,9 @@ event3 = Event.create(name: "Code meeting",
   categories: [outdoor_adventure],
   picture: "http://www.slate.com/content/dam/slate/articles/health_and_science/science/2013/05/130503_SCI_Multitask.jpg.CROP.article568-large.jpg",
 user: ana)
+
+# Photos
+photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780251/dog1_dcai03.jpg", event: event2)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780317/dog2_di73gb.jpg", event: event2)
+photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780318/dog3_oo1leh.jpg", event: event2)
+photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780318/dog4_q7n44c.jpg", event: event2)
