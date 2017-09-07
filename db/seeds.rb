@@ -9,7 +9,7 @@ ana = User.create(email: "ana@paula.com", password: "anapaula")
 sport_fitness = Category.create(name: "Sport & Fitness")
 outdoor_adventure = Category.create(name: "Outdoor & Adventure")
 
-event = Event.create(name: "My super nice event",
+event1 = Event.create(name: "My super nice event",
   description: "Will be the best event ever",
   location: "Amsterdam",
   price: 50,
@@ -58,3 +58,6 @@ photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/im
 photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780317/dog2_di73gb.jpg", event: event2)
 photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780318/dog3_oo1leh.jpg", event: event2)
 photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780318/dog4_q7n44c.jpg", event: event2)
+photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504784570/pc1_rzpaze.jpg", event: event3)
+photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504784573/pc2_yymzib.jpg", event: event3)
+photo7 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504784619/house1_kfrffb.jpg", event: event1)
