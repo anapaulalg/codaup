@@ -3,11 +3,17 @@ User.destroy_all
 Category.destroy_all
 Event.destroy_all
 Profile.delete_all
+Registration.delete_all
 
 ana = User.create(email: "ana@paula.com", password: "anapaula")
+wouter = User.create(email: "wouter@codaisseurup.com", password: "abcd1234")
+mat = User.create(email: "mat@codaisseurup.com", password: "abcd1234")
+
+puts "#{User.all.size} users created"
 
 sport_fitness = Category.create(name: "Sport & Fitness")
 outdoor_adventure = Category.create(name: "Outdoor & Adventure")
+puts "#{Category.all.size} categories created"
 
 event1 = Event.create(name: "My super nice event",
   description: "Will be the best event ever",
@@ -52,6 +58,7 @@ event3 = Event.create(name: "Code meeting",
   categories: [outdoor_adventure],
   picture: "http://www.slate.com/content/dam/slate/articles/health_and_science/science/2013/05/130503_SCI_Multitask.jpg.CROP.article568-large.jpg",
 user: ana)
+puts "#{Event.all.size} events created"
 
 # Photos
 photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504780251/dog1_dcai03.jpg", event: event2)
@@ -61,3 +68,4 @@ photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/im
 photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504784570/pc1_rzpaze.jpg", event: event3)
 photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504784573/pc2_yymzib.jpg", event: event3)
 photo7 = Photo.create!(remote_image_url: "http://res.cloudinary.com/djxmmaqyo/image/upload/v1504784619/house1_kfrffb.jpg", event: event1)
+puts "#{Photo.all.size} photos created"
